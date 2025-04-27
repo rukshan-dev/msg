@@ -2,6 +2,9 @@
  * @type {import('repacked').AppConfig}
  */
 const config = {
+  output: {
+    dir: "../docs",
+  },
   client: {
     entry: "./src/index.tsx",
   },
