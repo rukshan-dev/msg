@@ -35,4 +35,4 @@ jobs:
 
       - name: Publish to npm
         working-directory: ./msg/dist
-        run: npm publish
+        run: npm publish --access=public
