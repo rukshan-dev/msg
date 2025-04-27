@@ -6,8 +6,9 @@
     "target": "ESNext",
     "jsx": "react-jsx",
     "allowJs": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "sourceMap": true,
-    "checkJs": true
+    "checkJs": true,
+    "skipLibCheck": true,
   }
 }
