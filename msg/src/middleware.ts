@@ -1,10 +1,9 @@
-import { AnyObject } from "./deepProxy";
-import { Actions, Middleware, StoreReturn } from "./types";
+import { Actions, AnyObject, Middleware, StoreReturn } from "./types";
 
 export const applyMiddlewares = <T extends AnyObject, K extends Actions<T>>(
   store: StoreReturn<T, K>
 ) => {
-  return (...middlewares: Middleware<T, K>[]) => {
+  return (...middlewares: Middleware<T, K>[]): StoreReturn<T, K> => {
     let dispatch = store.dispatch;
 
     middlewares.reverse().forEach((middleware) => {

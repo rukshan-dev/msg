@@ -1,13 +1,6 @@
 import { EventEmitter } from "./events";
+import { AnyObject, DeepProxyProps } from "./types";
 import isMutable from "./utils/isMutable";
-
-export type AnyObject = Record<string | symbol | number, any>;
-
-export type DeepProxyProps<T extends AnyObject> = {
-  cache: WeakMap<object, any>;
-  paths: string[];
-  emitter: EventEmitter<T>;
-};
 
 const defaultOptions: DeepProxyProps<object> = {
   cache: new WeakMap(),
@@ -40,7 +33,7 @@ const deepProxy = <T extends AnyObject>(
       options.emitter.emit("updated", {
         state: target,
         paths,
-        path: paths.join(".")
+        path: paths.join("."),
       });
       return value;
     },

@@ -1,6 +1,12 @@
-import deepProxy, { AnyObject, DeepProxyProps } from "./deepProxy";
+import deepProxy from "./deepProxy";
 import { EventDetails, EventEmitter } from "./events";
-import { Actions, StoreOptions, StoreReturn } from "./types";
+import {
+  Actions,
+  AnyObject,
+  DeepProxyProps,
+  StoreOptions,
+  StoreReturn,
+} from "./types";
 
 export const createStore = <T extends AnyObject, K extends Actions<T>>(
   defaultValues: T,
@@ -40,7 +46,6 @@ export const createStore = <T extends AnyObject, K extends Actions<T>>(
   };
 
   const subscribe = (callback: (details: EventDetails<T>) => void) => {
-
     const subscriberFn: EventListener = (event: Event) => {
       //@todo - fix types
       const _e = event as CustomEvent<EventDetails<T>>;

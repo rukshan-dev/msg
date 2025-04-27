@@ -1,5 +1,12 @@
-import { AnyObject } from "./deepProxy";
-import { EventDetails } from "./events";
+import { EventDetails, EventEmitter } from "./events";
+
+export type AnyObject = Record<string | symbol | number, any>;
+
+export type DeepProxyProps<T extends AnyObject> = {
+  cache: WeakMap<object, any>;
+  paths: string[];
+  emitter: EventEmitter<T>;
+};
 
 export type Action<A extends any[] = any[]> = (
   ...args: A
