@@ -278,7 +278,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@repacked-tools/msg-react@workspace:."
   dependencies:
-    "@repacked-tools/msg": "npm:>=0.0.1-beta"
+    "@repacked-tools/msg": "npm:>=0.0.2-beta"
     "@swc/core": "npm:1.7.42"
     "@types/react": "npm:19.1.2"
     react: "npm:>=16.0.0"
@@ -286,15 +286,15 @@ __metadata:
     typescript: "npm:^5.6.3"
     yargs: "npm:17.7.2"
   peerDependencies:
-    "@repacked-tools/msg": ">=0.0.1-beta"
+    "@repacked-tools/msg": ">=0.0.2-beta"
     react: ">=16.0.0"
   languageName: unknown
   linkType: soft
 
-"@repacked-tools/msg@npm:>=0.0.1-beta":
-  version: 0.0.1-beta
-  resolution: "@repacked-tools/msg@npm:0.0.1-beta"
-  checksum: 10c0/1b76ba38367883f2ccad0c33799731075f1e71c1efbfc12dceae41159c6c5bcc4721ca1f629094f06536923b94babb8cd9e3ac9a7eb379c67c2937e6710bc1bd
+"@repacked-tools/msg@npm:>=0.0.2-beta":
+  version: 0.0.2-beta
+  resolution: "@repacked-tools/msg@npm:0.0.2-beta"
+  checksum: 10c0/7daa33e0a1228e6ad859ae2bae66959d27c48533e54a0e7390732d31b9da27551f99360ca9bee6359452b889b796bb3bcd00ebbb14d692de2a003aa29de4a51d
   languageName: node
   linkType: hard
 

@@ -1,11 +1,10 @@
 import {
+  AnyObject,
   getSelectorPath,
   isPathImpacted,
   StoreReturn,
 } from "@repacked-tools/msg";
 import { useRef, useSyncExternalStore } from "react";
-
-type AnyObject = Record<string | symbol | number, any>;
 
 type Selector<T extends AnyObject, K = any> = (state: T) => K;
 
