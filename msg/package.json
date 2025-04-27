@@ -1,5 +1,5 @@
 {
-  "name": "@repacked/msg",
+  "name": "@repacked-tools/msg",
   "version": "0.0.1-alpha",
   "main": "index.js",
   "repository": "git@github.com:rukshan-dev/msg.git",
