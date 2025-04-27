@@ -7,6 +7,7 @@ const config = {
   },
   client: {
     entry: "./src/index.tsx",
+    publicPath: "/msg",
   },
   development: {
     open: true,
