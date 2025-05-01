@@ -25,8 +25,10 @@ export const createStore = <T extends AnyObject, K extends Actions<T>>(
     current: defaultValues,
   };
 
+  const proxiedState = deepProxy(state.current, proxyOptions);
+
   const getState = (): T => {
-    return deepProxy(state.current, proxyOptions);
+    return proxiedState;
   };
 
   const getRawState = () => {

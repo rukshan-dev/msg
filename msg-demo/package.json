@@ -7,15 +7,17 @@
   },
   "version": "1.0.0",
   "scripts": {
-    "start": "repacked serve",
+    "build-msg": "yarn --cwd ../msg run build:npm",
+    "build-msg-react": "yarn --cwd ../msg-react run build:npm",
+    "start": "yarn build-msg && yarn build-msg-react && yarn && repacked serve",
     "build": "repacked build",
     "test": "repacked test"
   },
   "dependencies": {
     "@chakra-ui/react": "3.16.1",
     "@emotion/react": "11.14.0",
-    "@repacked-tools/msg": "0.0.2-beta",
-    "@repacked-tools/msg-react": "0.0.2-beta",
+    "@repacked-tools/msg": "file:../msg/dist/",
+    "@repacked-tools/msg-react": "file:../msg-react/dist/",
     "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-code-blocks": "0.1.6",

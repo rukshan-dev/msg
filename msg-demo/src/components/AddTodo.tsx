@@ -4,6 +4,8 @@ import { FC } from "react";
 import todoStore from "../todoStore";
 
 const AddTodo: FC = () => {
+  console.log("RENDER: ADD_TODO");
+  
   const currentTodo = useSelector(todoStore, (state) => state.current.value);
 
   const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
