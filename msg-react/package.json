@@ -1,6 +1,6 @@
 {
   "name": "@repacked-tools/msg-react",
-  "version": "0.0.3-beta",
+  "version": "0.0.4-beta",
   "main": "index.js",
   "repository": "git@github.com:rukshan-dev/msg.git",
   "author": "Rukshan Fernando<hello@rukshan.dev>",
@@ -12,7 +12,7 @@
     "deploy": "yarn --cwd ./dist npm publish"
   },
   "devDependencies": {
-    "@repacked-tools/msg": ">=0.0.2-beta",
+    "@repacked-tools/msg": ">=0.0.3-beta",
     "@swc/core": "1.7.42",
     "@types/react": "19.1.2",
     "react": ">=16.0.0",
@@ -21,7 +21,7 @@
     "yargs": "17.7.2"
   },
   "peerDependencies": {
-    "@repacked-tools/msg": ">=0.0.2-beta",
+    "@repacked-tools/msg": ">=0.0.3-beta",
     "react": ">=16.0.0"
   }
 }

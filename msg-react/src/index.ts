@@ -3,21 +3,28 @@ import {
   getSelectorPath,
   isPathImpacted,
   StoreReturn,
+  ImpactMode,
 } from "@repacked-tools/msg";
 import { useRef, useSyncExternalStore } from "react";
 
 type Selector<T extends AnyObject, K = any> = (state: T) => K;
+type SelectorOptions = {
+  mode: ImpactMode;
+};
 
 export const useSelector = <T extends AnyObject, K>(
   store: StoreReturn<T, any>,
-  selector: Selector<T, K>
+  selector: Selector<T, K>,
+  options: Partial<SelectorOptions> = {}
 ) => {
   const impactRef = useRef(true);
   const selectedValueRef = useRef<K | null>(null);
 
   const subscribe = (callback: () => void) => {
     const unsubscribe = store.subscribe((detail) => {
-      if (isPathImpacted(detail.paths, getSelectorPath(selector))) {
+      if (
+        isPathImpacted(detail.paths, getSelectorPath(selector), options.mode)
+      ) {
         impactRef.current = true;
         callback();
       }
