@@ -2541,20 +2541,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@repacked-tools/msg-react@npm:0.0.2-beta":
+"@repacked-tools/msg-react@file:../msg-react/dist/::locator=msg-demo%40workspace%3A.":
   version: 0.0.2-beta
-  resolution: "@repacked-tools/msg-react@npm:0.0.2-beta"
+  resolution: "@repacked-tools/msg-react@file:../msg-react/dist/#../msg-react/dist/::hash=1861df&locator=msg-demo%40workspace%3A."
   peerDependencies:
     "@repacked-tools/msg": ">=0.0.2-beta"
     react: ">=16.0.0"
-  checksum: 10c0/7fcd2e616acb31dac954d8f9a8c918cc5c1a736f60e16af6d8003e0c7dadf31d4e1349108e6a0ee7c63ce20a208a9530f4fa4732a5e9271f308d6847fd987560
+  checksum: 10c0/6b7986b61da031001399d8e88468dc77b2b207f6807559c9ed9c0554a39a15401273a49c46bf18d5fd59d982f9cb57165e43876e90747706851a947273e85df1
   languageName: node
   linkType: hard
 
-"@repacked-tools/msg@npm:0.0.2-beta":
+"@repacked-tools/msg@file:../msg/dist/::locator=msg-demo%40workspace%3A.":
   version: 0.0.2-beta
-  resolution: "@repacked-tools/msg@npm:0.0.2-beta"
-  checksum: 10c0/7daa33e0a1228e6ad859ae2bae66959d27c48533e54a0e7390732d31b9da27551f99360ca9bee6359452b889b796bb3bcd00ebbb14d692de2a003aa29de4a51d
+  resolution: "@repacked-tools/msg@file:../msg/dist/#../msg/dist/::hash=c3ee5a&locator=msg-demo%40workspace%3A."
+  checksum: 10c0/a3e3e4793348620299b4cddf6a40b93842e642bebe6498f8ec6e7b16f05d3f396947a2f9e99721093039929165096f4e6ac406b912f495417afe616851931087
   languageName: node
   linkType: hard
 
@@ -8722,8 +8722,8 @@ __metadata:
   dependencies:
     "@chakra-ui/react": "npm:3.16.1"
     "@emotion/react": "npm:11.14.0"
-    "@repacked-tools/msg": "npm:0.0.2-beta"
-    "@repacked-tools/msg-react": "npm:0.0.2-beta"
+    "@repacked-tools/msg": "file:../msg/dist/"
+    "@repacked-tools/msg-react": "file:../msg-react/dist/"
     "@types/react": "npm:19.1.1"
     "@types/react-dom": "npm:19.1.2"
     next-themes: "npm:^0.4.6"

@@ -17,6 +17,8 @@ const highlightFade = keyframes`
 `;
 
 const Todo: FC<{ index: number }> = ({ index }) => {
+  console.log(`RENDER: TODO:${index}`);
+
   const todo = useSelector(todoStore, (state) => state.todos[index]);
 
   const removeHandler = () => {

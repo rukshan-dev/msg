@@ -44,3 +44,8 @@ export type Store<T extends AnyObject, K extends Actions<T>> = (
   actions: K,
   options: Partial<StoreOptions<T, K>>
 ) => StoreReturn<T, K>;
+
+export enum ImpactMode {
+  Strict = "strict",
+  Nested = "nested",
+}

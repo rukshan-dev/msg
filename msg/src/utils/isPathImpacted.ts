@@ -1,7 +1,17 @@
+import { ImpactMode } from "../types";
+
 export const isPathImpacted = (
   changedPath: (string | symbol)[],
-  selectedPath: (string | symbol)[]
+  selectedPath: (string | symbol)[],
+  mode: ImpactMode = ImpactMode.Nested
 ) => {
+  if (mode === ImpactMode.Strict) {
+    if (changedPath.length !== selectedPath.length) {
+      return false;
+    }
+    return changedPath.join(".") === selectedPath.join(".");
+  }
+
   if (changedPath.length < selectedPath.length) {
     return false;
   }
